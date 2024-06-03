@@ -1,3 +1,90 @@
-#heading {
-    color: aqua;
+body {
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.logo {
+	border-radius: 10px;
+	width: 100px;
+	height: auto;
+}
+
+.nav-items > ul {
+	display: flex;
+	list-style-type: none;
+}
+
+.nav-items > ul > li {
+	font-size: larger;
+	padding: 10px;
+	margin: 10px;
+}
+
+.res-card {
+	background-color: #f0f0f0;
+	width: 200px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin: 5px;
+	transition: transform 0.3s ease;
+}
+.res-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.res-card:hover {
+	cursor: pointer;
+	border: 1px solid black;
+	border-radius: 10px;
+	transform: scale(1.0099); /* Slightly increases the size of the card */
+}
+
+.search {
+	padding: 10px;
+	margin: 5px;
+}
+
+.card-heading {
+	text-align: center; /* Centers the text */
+	margin-bottom: 5px; /* Adds space between heading and image */
+}
+
+.res-logo {
+    display: flex;
+    justify-content: center;
+	width: 200px;
+	height: 100px;
+}
+.res-image{
+    width:200px;
+    height:100px;
+}
+
+.res-cuisine{
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    margin-bottom: 5px;
+}
+
+.card-subheading {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.fliter-btn{
+	margin: 10px;
+	cursor: pointer;
 }
