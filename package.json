@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "This is react project by Peeyush Verma",
 	"scripts": {
-    "start": "parcel index.html",
-    "biuld": "parcel build index.html",
+		"start": "parcel index.html",
+		"biuld": "parcel build index.html",
 		"test": "jest"
 	},
 	"keywords": [],
@@ -16,7 +16,8 @@
 	},
 	"dependencies": {
 		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"react-dom": "^18.3.1",
+		"react-infinite-scroll-component": "^6.1.0"
 	},
 	"browserslist": [
 		"last 10 versions"
