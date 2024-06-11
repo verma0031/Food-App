@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -13,7 +13,7 @@ const Body = () => {
 
 	useEffect(() => {
 		fetchData();
-	}, []);
+	}, [searchText]);
 
 	const fetchData = async () => {
 		const restaurantData = await fetch(
@@ -90,7 +90,12 @@ const Body = () => {
 			<div className="res-container">
 				{filteredRestaurant.map((restaurant) => {
 					return (
-						<RestaurantCard key={restaurant.info.id} resData={restaurant} />
+						<Link
+							to={`/restaurant/${restaurant.info.id}`}
+							key={restaurant.info.id}
+						>
+							<RestaurantCard resData={restaurant} />
+						</Link>
 					);
 				})}
 			</div>
