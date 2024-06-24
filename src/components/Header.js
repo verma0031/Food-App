@@ -1,37 +1,60 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-    const [btnName, setBtnName] = useState("Login");
+	const [btnName, setBtnName] = useState("Login");
+
 	return (
-		<div className="header">
-			<div className="logo-container">
-				<img className="logo" src={LOGO_URL} />
+		<header className="flex justify-between items-center bg-gray-100 p-4 shadow-md">
+			<div className="w-32">
+				<img src={LOGO_URL} alt="Logo" className="w-full" />
 			</div>
-			<div className="nav-items">
-				<ul>
+			<nav>
+				<ul className="flex space-x-6">
 					<li>
-						<Link to="/">Home</Link>
+						<Link
+							className="text-gray-700 hover:text-gray-900 transition duration-200"
+							to="/"
+						>
+							Home
+						</Link>
 					</li>
 					<li>
-						<Link to="/about">About Us</Link>
+						<Link
+							className="text-gray-700 hover:text-gray-900 transition duration-200"
+							to="/about"
+						>
+							About Us
+						</Link>
 					</li>
 					<li>
-						<Link to="/contact">Contact Us</Link>
+						<Link
+							className="text-gray-700 hover:text-gray-900 transition duration-200"
+							to="/contact"
+						>
+							Contact Us
+						</Link>
 					</li>
-					<li>Cart</li>
-					<button
-						className="btn-login"
-						onClick={() => {
-							btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
-						}}
-					>
-						{btnName}
-					</button>
+					<li>
+						<Link
+							className="text-gray-700 hover:text-gray-900 transition duration-200"
+							to="/cart"
+						>
+							Cart
+						</Link>
+					</li>
 				</ul>
-			</div>
-		</div>
+			</nav>
+			<button
+				className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-200"
+				onClick={() => {
+					setBtnName(btnName === "Login" ? "Logout" : "Login");
+				}}
+			>
+				{btnName}
+			</button>
+		</header>
 	);
 };
 
